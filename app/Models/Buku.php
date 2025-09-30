@@ -2,9 +2,19 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class buku extends Model
+class Buku extends Model
 {
-    protected $table = 'buku'; // Tambahkan baris ini
+    use HasFactory;
+
+    protected $table = 'buku';
+
+    protected $fillable = [
+        'judul_buku',
+        'penulis',
+        'tanggal_terbit',
+        'harga',
+    ];
 }
